@@ -8,7 +8,6 @@ const { User } = require('./models/user');
 let app = express();
 
 app.use(bodyParse.json());
-// app.use(bodyParse.urlencoded({ extended: true }));
 
 app.post('/todos', (req, res) => {
     const todo = new Todo({
@@ -25,3 +24,5 @@ app.post('/todos', (req, res) => {
 app.listen(3000, () => {
     console.log('Started on PORT 3000');
 });
+
+module.exports = { app };
