@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/node_todo_api');
+mongoose.connect(process.env.MONGODB_URI);
 
 module.exports = { mongoose };
