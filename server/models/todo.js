@@ -17,14 +17,4 @@ const Todo = mongoose.model('Todo', {
     }
 });
 
-// const newTodo = new Todo({
-//     text: 'Something to do'
-// });
-
-// newTodo.save().then((doc) => {
-//     console.log(JSON.stringify(doc, undefined, 2));
-// }, (err) => {
-//     console.log('Unable to save todo', err);
-// });
-
 module.exports = { Todo };
