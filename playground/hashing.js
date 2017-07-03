@@ -35,6 +35,3 @@ console.log(decoded);
 // } else {
 //     console.log('Data was changed. Do not trust!');
 // }
-
-
-
