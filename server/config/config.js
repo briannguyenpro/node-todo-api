@@ -1,10 +1,11 @@
 const env = process.env.NODE_ENV || 'development';
 console.log('env', env);
 
-if (env === 'development') {
-    process.env.PORT = 3000;
-    process.env.MONGODB_URI = 'mongodb://localhost/node_todo_api';
-} else if (env === 'test') {
-    process.env.PORT = 3000;
-    process.env.MONGODB_URI = 'mongodb://localhost/node_todo_api_test';
+if (env === 'development' || env === 'test') {
+    const config = require('./config.json');
+    const envConfig = config[env];
+
+    Object.keys(envConfig).forEach((key) => {
+        process.env[key] = envConfig[key];
+    });
 }
